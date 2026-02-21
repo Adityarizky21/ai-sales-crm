@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Sales & CRM Assistant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-layout">
+
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="sidebar-logo">
+          <span class="logo-icon">◈</span>
+          <span class="logo-text">SalesIQ</span>
+        </div>
+        <nav class="sidebar-nav">
+          <a href="#" class="nav-item active">
+            <span class="nav-icon">⬡</span>
+            <span>Analyze</span>
+          </a>
+          <!--<a href="#" class="nav-item">
+            <span class="nav-icon">◎</span>
+            <span>History</span>
+          </a>
+          <a href="#" class="nav-item">
+            <span class="nav-icon">◫</span>
+            <span>Reports</span>
+          </a>
+          <a href="#" class="nav-item">
+            <span class="nav-icon">⬙</span>
+            <span>Settings</span>
+          </a>-->
+        </nav>
+        <div class="sidebar-footer">
+          <div class="user-info">
+            <div class="user-avatar">S</div>
+            <div class="user-details">
+              <span class="user-name">Sales Pro</span>
+              <span class="user-role">CRM Assistant</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+
+        <!-- Header -->
+        <header class="top-header">
+          <div class="header-left">
+            <h1 class="page-title">Conversation Analyzer</h1>
+            <span class="page-badge">AI Powered</span>
+          </div>
+          <div class="header-right">
+            <div class="status-dot"></div>
+            <span class="status-text">Gemini Connected</span>
+          </div>
+        </header>
+
+        <!-- Chat Area -->
+        <div class="workspace">
+
+          <!-- Messages Panel -->
+          <div class="messages-panel">
+            <div id="chat-box" class="chat-box">
+              <!-- Welcome State -->
+              <div class="welcome-state" id="welcome-state">
+                <div class="welcome-icon">◈</div>
+                <h2>Ready to Analyze</h2>
+                <p>Paste a sales conversation below. Include the full dialogue between your sales rep and the client for the best analysis results.</p>
+                <div class="welcome-hints">
+                  <div class="hint-chip">📋 Paste full conversation</div>
+                  <div class="hint-chip">🔍 Detect objections</div>
+                  <div class="hint-chip">📈 Deal probability</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Input Panel -->
+          <div class="input-panel">
+            <div class="input-header">
+              <span class="input-label">💬 Customer Conversation</span>
+              <span class="input-hint">Enter to send &nbsp;·&nbsp; Shift+Enter for new line</span>
+            </div>
+            <form id="chat-form">
+              <div class="textarea-wrapper">
+                <textarea
+                  id="user-input"
+                  placeholder="Paste or type the conversation here...
+
+Example:
+Sales: Selamat pagi, apakah Anda tertarik dengan produk kami?
+Client: Saya tertarik, tapi harganya terlalu mahal.
+Sales: Kami bisa memberikan diskon khusus untuk Anda..."
+                  rows="6"
+                ></textarea>
+                <div class="textarea-actions">
+                  <button type="button" id="clear-btn" class="btn-clear" title="Clear input">✕ Clear</button>
+                  <button type="submit" id="submit-btn" class="btn-send">
+                    <span class="btn-text">Analyze</span>
+                    <span class="btn-icon">→</span>
+                  </button>
+                </div>
+              </div>
+            </form>
+            <div class="char-counter"><span id="char-count">0</span> characters</div>
+          </div>
+
+        </div>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
